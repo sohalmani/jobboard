@@ -1055,9 +1055,9 @@ h4 {
   padding: 4px 10px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 575.98px) {
   .job-listings .custom-width {
-    width: 100% !important;
+    width: auto !important;
   }
 }
 
@@ -1108,6 +1108,19 @@ h4 {
 
 .job-listings .job-listing-position strong {
   color: #b3b3b3;
+}
+
+@media (min-width: 575.98px) {
+  .job-listings .job-listing-location,
+  .job-listings .job-listing-meta {
+    text-align: center;
+  }
+}
+
+@media (min-width: 575.98px) {
+  .job-listings .job-listing-actions {
+    text-align: right;
+  }
 }
 
 .btn-file {
