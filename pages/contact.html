@@ -4,14 +4,14 @@
   <title>JobBoard &mdash; Website Template by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="css/bootstrap-select.min.css">
-  <link rel="stylesheet" href="fonts/icomoon.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/quill.snow.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="/assets/fonts/icomoon.css">
+  <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/assets/css/animate.min.css">
+  <link rel="stylesheet" href="/assets/css/quill.snow.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body id="top">
   <div id="overlayer"></div>
@@ -39,20 +39,20 @@
               <li><a href="about.html">About</a></li>
               <li><a href="jobs.html">Jobs</a></li>
               <li class="has-children">
-                <a href="services.html" class="active">Pages</a>
+                <a href="services.html">Pages</a>
                 <ul class="dropdown">
                   <li><a href="services.html">Services</a></li>
                   <li><a href="service.html">Service Single</a></li>
                   <li><a href="blogs.html">Blogs</a></li>
                   <li><a href="blog.html">Blog Single</a></li>
-                  <li><a href="portfolios.html" class="active">Portfolio</a></li>
+                  <li><a href="portfolios.html">Portfolio</a></li>
                   <li><a href="portfolio.html">Portfolio Single</a></li>
                   <li><a href="testimonials.html">Testimonials</a></li>
                   <li><a href="faqs.html">Frequently Ask Questions</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                 </ul>
               </li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
               <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Job</a></li>
               <li class="d-lg-none"><a href="login.html">Log In</a></li>
             </ul>
@@ -68,101 +68,68 @@
       </div>
     </header>
     <!-- HOME -->
-    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('/assets/images/hero_1.jpg');" id="home-section">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <h1 class="text-white font-weight-bold">Portfolio (Extra Pages)</h1>
+            <h1 class="text-white font-weight-bold">Contact Us</h1>
             <div class="custom-breadcrumbs">
               <a href="#">Home</a> <span class="mx-2 slash">/</span>
-              <span class="text-white"><strong>Portfolio</strong></span>
+              <span class="text-white"><strong>Contact Us</strong></span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="site-section block__62272" id="next-section">
+    <section class="site-section" id="next-section">
       <div class="container">
-        <div class="row justify-content-center mb-5" data-aos="fade-up">
-          <div id="filters" class="filters text-center button-group col-md-7">
-            <button class="btn btn-primary active" data-filter="*">All</button>
-            <button class="btn btn-primary" data-filter=".web">Web</button>
-            <button class="btn btn-primary" data-filter=".design">Design</button>
-            <button class="btn btn-primary" data-filter=".brand">Brand</button>
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <form action="#" class="">
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="fname" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="lname">Last Name</label>
+                  <input type="text" id="lname" class="form-control">
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label>
+                  <input type="email" id="email" class="form-control">
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Subject</label>
+                  <input type="subject" id="subject" class="form-control">
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="message">Message</label>
+                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                </div>
+              </div>
+            </form>
           </div>
-        </div>
-        <div id="posts" class="row no-gutter">
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_1.jpg">
-            </a>
-          </div>
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_2.jpg">
-            </a>
-          </div>
-          <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_3.jpg">
-            </a>
-          </div>
-          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_4.jpg">
-            </a>
-          </div>
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_5.jpg">
-            </a>
-          </div>
-          <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_6.jpg">
-            </a>
-          </div>
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_7.jpg">
-            </a>
-          </div>
-          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_8.jpg">
-            </a>
-          </div>
-          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_9.jpg">
-            </a>
-          </div>
-          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_10.jpg">
-            </a>
-          </div>
-          <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_11.jpg">
-            </a>
-          </div>
-          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-            <a href="portfolio.html" class="item-wrap">
-              <span class="icon-add"></span>
-              <img class="img-fluid" src="images/sq_img_12.jpg">
-            </a>
+          <div class="col-lg-5 ml-auto">
+            <div class="p-4 mb-3 bg-white">
+              <p class="mb-0 font-weight-bold">Address</p>
+              <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+              <p class="mb-0 font-weight-bold">Phone</p>
+              <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+              <p class="mb-0 font-weight-bold">Email Address</p>
+              <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+            </div>
           </div>
         </div>
       </div>
@@ -178,10 +145,10 @@
           <div class="col-lg-6">
             <div class="block__87154 bg-white rounded">
               <blockquote>
-                <p>Ipsum harum assumenda in eum vel eveniet numquam cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit</p>
+                <p>&ldquo;Ipsum harum assumenda in eum vel eveniet numquam cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit&rdquo;</p>
               </blockquote>
               <div class="block__91147 d-flex align-items-center">
-                <figure class="mr-4"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <figure class="mr-4"><img src="/assets/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
                 <div>
                   <h3>Elisabeth Smith</h3>
                   <span class="position">Creative Director</span>
@@ -192,10 +159,10 @@
           <div class="col-lg-6">
             <div class="block__87154 bg-white rounded">
               <blockquote>
-                <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit</p>
+                <p>&ldquo;Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit&rdquo;</p>
               </blockquote>
               <div class="block__91147 d-flex align-items-center">
-                <figure class="mr-4"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+                <figure class="mr-4"><img src="/assets/images/person_2.jpg" alt="Image" class="img-fluid"></figure>
                 <div>
                   <h3>Chris Peter</h3>
                   <span class="position">Web Designer</span>
@@ -259,17 +226,17 @@
       </div>
     </footer>
   </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/stickyfill.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/quill.min.js"></script>
-  <script src="js/bootstrap-select.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/isotope.pkgd.min.js"></script>
+  <script src="/assets/js/stickyfill.min.js"></script>
+  <script src="/assets/js/jquery.fancybox.min.js"></script>
+  <script src="/assets/js/jquery.easing.min.js"></script>
+  <script src="/assets/js/jquery.waypoints.min.js"></script>
+  <script src="/assets/js/jquery.animateNumber.min.js"></script>
+  <script src="/assets/js/owl.carousel.min.js"></script>
+  <script src="/assets/js/quill.min.js"></script>
+  <script src="/assets/js/bootstrap-select.min.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>

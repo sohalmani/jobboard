@@ -4,14 +4,14 @@
   <title>JobBoard &mdash; Website Template by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="css/bootstrap-select.min.css">
-  <link rel="stylesheet" href="fonts/icomoon.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
-  <link rel="stylesheet" href="css/quill.snow.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="/assets/fonts/icomoon.css">
+  <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/assets/css/animate.min.css">
+  <link rel="stylesheet" href="/assets/css/quill.snow.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body id="top">
   <div id="overlayer"></div>
@@ -39,16 +39,16 @@
               <li><a href="about.html">About</a></li>
               <li><a href="jobs.html">Jobs</a></li>
               <li class="has-children">
-                <a href="services.html">Pages</a>
+                <a href="services.html" class="active">Pages</a>
                 <ul class="dropdown">
                   <li><a href="services.html">Services</a></li>
                   <li><a href="service.html">Service Single</a></li>
                   <li><a href="blogs.html">Blogs</a></li>
                   <li><a href="blog.html">Blog Single</a></li>
-                  <li><a href="portfolios.html">Portfolio</a></li>
+                  <li><a href="portfolios.html" class="active">Portfolio</a></li>
                   <li><a href="portfolio.html">Portfolio Single</a></li>
                   <li><a href="testimonials.html">Testimonials</a></li>
-                  <li><a href="faqs.html" class="active">Frequently Ask Questions</a></li>
+                  <li><a href="faqs.html">Frequently Ask Questions</a></li>
                   <li><a href="gallery.html">Gallery</a></li>
                 </ul>
               </li>
@@ -68,66 +68,101 @@
       </div>
     </header>
     <!-- HOME -->
-    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('/assets/images/hero_1.jpg');" id="home-section">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <h1 class="text-white font-weight-bold">Frequently Ask Questions</h1>
+            <h1 class="text-white font-weight-bold">Portfolio (Extra Pages)</h1>
             <div class="custom-breadcrumbs">
-              <a href="index.html">Home</a> <span class="mx-2 slash">/</span>
-              <span class="text-white"><strong>FAQ</strong></span>
+              <a href="#">Home</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong>Portfolio</strong></span>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="site-section" id="accordion">
+    <section class="site-section block__62272" id="next-section">
       <div class="container">
-        <div class="row accordion justify-content-center block__76208">
-          <div class="col-lg-6">
-            <img src="images/sq_img_8.jpg" alt="Image" class="img-fluid rounded">
+        <div class="row justify-content-center mb-5" data-aos="fade-up">
+          <div id="filters" class="filters text-center button-group col-md-7">
+            <button class="btn btn-primary active" data-filter="*">All</button>
+            <button class="btn btn-primary" data-filter=".web">Web</button>
+            <button class="btn btn-primary" data-filter=".design">Design</button>
+            <button class="btn btn-primary" data-filter=".brand">Brand</button>
           </div>
-          <div class="col-lg-5 ml-auto">
-            <div class="accordion-item">
-              <h3 class="mb-0 heading">
-                <a class="btn-block h4" data-toggle="collapse" href="#collapseFive" role="button" aria-expanded="true" aria-controls="collapseFive">What is the name of your company<span class="icon"></span></a>
-              </h3>
-              <div id="collapseFive" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="body-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae cumque perspiciatis aperiam accusantium facilis provident aspernatur nisi optio debitis dolorum, est eum eligendi vero aut ad necessitatibus nulla sit labore doloremque magnam! Ex molestiae, dolor tempora, ad fuga minima enim mollitia consequuntur, necessitatibus praesentium eligendi officia recusandae culpa tempore eaque quasi ullam magnam modi quidem in amet. Quod debitis error placeat, tempore quasi aliquid eaque vel facilis culpa voluptate.</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h3 class="mb-0 heading">
-                <a class="btn-block h4" data-toggle="collapse" href="#collapseSix" role="button" aria-expanded="false" aria-controls="collapseSix">How much pay for 3 months?<span class="icon"></span></a>
-              </h3>
-              <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="body-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h3 class="mb-0 heading">
-                <a class="btn-block h4" data-toggle="collapse" href="#collapseSeven" role="button" aria-expanded="false" aria-controls="collapseSeven">Do I need to register? <span class="icon"></span></a>
-              </h3>
-              <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="body-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h3 class="mb-0 heading">
-                <a class="btn-block h4" data-toggle="collapse" href="#collapseEight" role="button" aria-expanded="false" aria-controls="collapseEight">Who should I contact in case of support.<span class="icon"></span></a>
-              </h3>
-              <div id="collapseEight" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="body-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</p>
-                </div>
-              </div>
-            </div>
+        </div>
+        <div id="posts" class="row no-gutter">
+          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_1.jpg">
+            </a>
+          </div>
+          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_2.jpg">
+            </a>
+          </div>
+          <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_3.jpg">
+            </a>
+          </div>
+          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_4.jpg">
+            </a>
+          </div>
+          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_5.jpg">
+            </a>
+          </div>
+          <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_6.jpg">
+            </a>
+          </div>
+          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_7.jpg">
+            </a>
+          </div>
+          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_8.jpg">
+            </a>
+          </div>
+          <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_9.jpg">
+            </a>
+          </div>
+          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_10.jpg">
+            </a>
+          </div>
+          <div class="item brand col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_11.jpg">
+            </a>
+          </div>
+          <div class="item design col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+            <a href="portfolio.html" class="item-wrap">
+              <span class="icon-add"></span>
+              <img class="img-fluid" src="/assets/images/sq_img_12.jpg">
+            </a>
           </div>
         </div>
       </div>
@@ -143,10 +178,10 @@
           <div class="col-lg-6">
             <div class="block__87154 bg-white rounded">
               <blockquote>
-                <p>&ldquo;Ipsum harum assumenda in eum vel eveniet numquam cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit&rdquo;</p>
+                <p>Ipsum harum assumenda in eum vel eveniet numquam cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit</p>
               </blockquote>
               <div class="block__91147 d-flex align-items-center">
-                <figure class="mr-4"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+                <figure class="mr-4"><img src="/assets/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
                 <div>
                   <h3>Elisabeth Smith</h3>
                   <span class="position">Creative Director</span>
@@ -157,10 +192,10 @@
           <div class="col-lg-6">
             <div class="block__87154 bg-white rounded">
               <blockquote>
-                <p>&ldquo;Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit&rdquo;</p>
+                <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit</p>
               </blockquote>
               <div class="block__91147 d-flex align-items-center">
-                <figure class="mr-4"><img src="images/person_2.jpg" alt="Image" class="img-fluid"></figure>
+                <figure class="mr-4"><img src="/assets/images/person_2.jpg" alt="Image" class="img-fluid"></figure>
                 <div>
                   <h3>Chris Peter</h3>
                   <span class="position">Web Designer</span>
@@ -224,17 +259,17 @@
       </div>
     </footer>
   </div>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/stickyfill.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/quill.min.js"></script>
-  <script src="js/bootstrap-select.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/isotope.pkgd.min.js"></script>
+  <script src="/assets/js/stickyfill.min.js"></script>
+  <script src="/assets/js/jquery.fancybox.min.js"></script>
+  <script src="/assets/js/jquery.easing.min.js"></script>
+  <script src="/assets/js/jquery.waypoints.min.js"></script>
+  <script src="/assets/js/jquery.animateNumber.min.js"></script>
+  <script src="/assets/js/owl.carousel.min.js"></script>
+  <script src="/assets/js/quill.min.js"></script>
+  <script src="/assets/js/bootstrap-select.min.js"></script>
+  <script src="/assets/js/script.js"></script>
 </body>
 </html>
