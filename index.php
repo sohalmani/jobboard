@@ -21,7 +21,7 @@ $routes = [
   '/portfolios'   => 'portfolios',
   '/portfolio'    => 'portfolio',
   '/testimonials' => 'testimonials',
-  '/faq'          => 'faq',
+  '/faqs'         => 'faqs',
   '/gallery'      => 'gallery',
 
   '/contact'      => 'contact',
@@ -100,8 +100,11 @@ function app_run($routes) {
   // Get the current URI
   $uri = getUri();
 
+  require_once basePath("includes/header.php");
   // Load page based on the URI
   loadPage($uri, $routes);
+
+  require_once basePath("includes/footer.php");
 }
 
 // Run the application
