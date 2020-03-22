@@ -1,16 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>JobBoard &mdash; Website Template by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>JobBoard &mdash; Website Template by Colorlib</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Free-Template.co">
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/assets/css/bootstrap-select.min.css">
   <link rel="stylesheet" href="/assets/fonts/icomoon.css">
   <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/assets/css/animate.min.css">
-  <link rel="stylesheet" href="/assets/css/quill.snow.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body id="top">
@@ -32,48 +35,49 @@
     <header class="site-navbar mt-3">
       <div class="container-fluid">
         <div class="row align-items-center">
-          <div class="site-logo col-6"><a href="index.html">JobBoard</a></div>
+          <div class="site-logo col-6"><a href="/">JobBoard</a></div>
           <nav class="mx-auto site-navigation">
             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-              <li><a href="index.html" class="nav-link">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="jobs.html" class="active">Jobs</a></li>
+              <li><a href="/" class="nav-link active">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/jobs">Jobs</a></li>
               <li class="has-children">
-                <a href="services.html">Pages</a>
+                <a href="/services">Pages</a>
                 <ul class="dropdown">
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="service.html">Service Single</a></li>
-                  <li><a href="blogs.html">Blogs</a></li>
-                  <li><a href="blog.html">Blog Single</a></li>
-                  <li><a href="portfolios.html">Portfolio</a></li>
-                  <li><a href="portfolio.html">Portfolio Single</a></li>
-                  <li><a href="testimonials.html">Testimonials</a></li>
-                  <li><a href="faqs.html">Frequently Ask Questions</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="/services">Services</a></li>
+                  <li><a href="/service">Service Single</a></li>
+                  <li><a href="/blogs">Blogs</a></li>
+                  <li><a href="/blog">Blog Single</a></li>
+                  <li><a href="/portfolios">Portfolio</a></li>
+                  <li><a href="/portfolio">Portfolio Single</a></li>
+                  <li><a href="/testimonials">Testimonials</a></li>
+                  <li><a href="/faqs">Frequently Ask Questions</a></li>
+                  <li><a href="/gallery">Gallery</a></li>
                 </ul>
               </li>
-              <li><a href="contact.html">Contact</a></li>
-              <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Job</a></li>
-              <li class="d-lg-none"><a href="login.html">Log In</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li class="d-lg-none"><a href="/post-job"><span class="mr-2">+</span> Post a Job</a></li>
+              <li class="d-lg-none"><a href="/login">Log In</a></li>
             </ul>
           </nav>
           <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
             <div class="ml-auto">
-              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post a Job</a>
-              <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
+              <a href="/post-job" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post a Job</a>
+              <a href="/login" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
             </div>
             <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
           </div>
         </div>
       </div>
     </header>
-    <section class="section-hero home-section overlay inner-page bg-image" style="background-image: url('/assets/images/hero_1.jpg');" id="home-section">
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image" style="background-image: url('/assets/images/hero_1.jpg');" id="home-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-12">
             <div class="mb-5 text-center">
               <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quas fugit ex!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
             </div>
             <form method="get" class="search-jobs-form">
               <div class="row mb-5">
@@ -121,7 +125,43 @@
         <span class=" icon-keyboard_arrow_down"></span>
       </a>
     </section>
-    <section class="site-section" id="next">
+    <section class="py-5 bg-image overlay-primary fixed overlay" id="next" style="background-image: url('/assets/images/hero_1.jpg');">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2 text-white">JobBoard Site Stats</h2>
+            <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde officiis recusandae sequi excepturi corrupti.</p>
+          </div>
+        </div>
+        <div class="row pb-0 block__19738 section-counter">
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="1930">0</strong>
+            </div>
+            <span class="caption">Candidates</span>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="54">0</strong>
+            </div>
+            <span class="caption">Jobs Posted</span>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="120">0</strong>
+            </div>
+            <span class="caption">Jobs Filled</span>
+          </div>
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="550">0</strong>
+            </div>
+            <span class="caption">Companies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="site-section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-7 text-center">
@@ -130,7 +170,7 @@
         </div>
         <ul class="job-listings mb-5">
           <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="job.html"></a>
+            <a href="/job"></a>
             <div class="job-listing-logo">
               <img src="/assets/images/job_logo_1.jpg" alt="Image" class="img-fluid">
             </div>
@@ -145,14 +185,10 @@
               <div class="job-listing-meta custom-width w-25">
                 <span class="badge badge-danger">Part Time</span>
               </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
             </div>
           </li>
           <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="job.html"></a>
+            <a href="/job"></a>
             <div class="job-listing-logo">
               <img src="/assets/images/job_logo_2.jpg" alt="Image" class="img-fluid">
             </div>
@@ -167,14 +203,10 @@
               <div class="job-listing-meta custom-width w-25">
                 <span class="badge badge-success">Full Time</span>
               </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
             </div>
           </li>
           <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="job.html"></a>
+            <a href="/job"></a>
             <div class="job-listing-logo">
               <img src="/assets/images/job_logo_3.jpg" alt="Image" class="img-fluid">
             </div>
@@ -189,14 +221,10 @@
               <div class="job-listing-meta custom-width w-25">
                 <span class="badge badge-success">Full Time</span>
               </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
             </div>
           </li>
           <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="job.html"></a>
+            <a href="/job"></a>
             <div class="job-listing-logo">
               <img src="/assets/images/job_logo_4.jpg" alt="Image" class="img-fluid">
             </div>
@@ -211,14 +239,10 @@
               <div class="job-listing-meta custom-width w-25">
                 <span class="badge badge-success">Full Time</span>
               </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
             </div>
           </li>
           <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="job.html"></a>
+            <a href="/job"></a>
             <div class="job-listing-logo">
               <img src="/assets/images/job_logo_5.jpg" alt="Image" class="img-fluid">
             </div>
@@ -233,15 +257,10 @@
               <div class="job-listing-meta custom-width w-25">
                 <span class="badge badge-success">Full Time</span>
               </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
             </div>
           </li>
-
           <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="job.html"></a>
+            <a href="/job"></a>
             <div class="job-listing-logo">
               <img src="/assets/images/job_logo_1.jpg" alt="Image" class="img-fluid">
             </div>
@@ -256,15 +275,10 @@
               <div class="job-listing-meta custom-width w-25">
                 <span class="badge badge-danger">Part Time</span>
               </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
             </div>
           </li>
-
           <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="job.html"></a>
+            <a href="/job"></a>
             <div class="job-listing-logo">
               <img src="/assets/images/job_logo_2.jpg" alt="Image" class="img-fluid">
             </div>
@@ -278,10 +292,6 @@
               </div>
               <div class="job-listing-meta custom-width w-25">
                 <span class="badge badge-success">Full Time</span>
-              </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
               </div>
             </div>
           </li>
@@ -318,6 +328,91 @@
         </div>
       </div>
     </section>
+    <section class="site-section py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 text-center mt-4 mb-5">
+            <div class="row justify-content-center">
+              <div class="col-md-7">
+                <h2 class="section-title mb-2">Company We've Helped</h2>
+                <p class="lead">Porro error reiciendis commodi beatae omnis similique voluptate rerum ipsam fugit mollitia ipsum facilis expedita tempora suscipit iste</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="/assets/images/logo_mailchimp.svg" alt="Image" class="img-fluid logo-1">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="/assets/images/logo_paypal.svg" alt="Image" class="img-fluid logo-2">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="/assets/images/logo_stripe.svg" alt="Image" class="img-fluid logo-3">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="/assets/images/logo_visa.svg" alt="Image" class="img-fluid logo-4">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="/assets/images/logo_apple.svg" alt="Image" class="img-fluid logo-5">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="/assets/images/logo_tinder.svg" alt="Image" class="img-fluid logo-6">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="/assets/images/logo_sony.svg" alt="Image" class="img-fluid logo-7">
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <img src="/assets/images/logo_airbnb.svg" alt="Image" class="img-fluid logo-8">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light pt-5 testimony-full">
+      <div class="owl-carousel single-carousel">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 align-self-center text-center text-lg-left">
+              <blockquote>
+                <p>&ldquo;Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae.&rdquo;</p>
+                <p><cite> &mdash; Corey Woods, @Dribbble</cite></p>
+              </blockquote>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-right">
+              <img src="/assets/images/person_transparent_2.png" alt="Image" class="img-fluid mb-0">
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 align-self-center text-center text-lg-left">
+              <blockquote>
+                <p>&ldquo;Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae.&rdquo;</p>
+                <p><cite> &mdash; Chris Peters, @Google</cite></p>
+              </blockquote>
+            </div>
+            <div class="col-lg-6 align-self-end text-center text-lg-right">
+              <img src="/assets/images/person_transparent_1.png" alt="Image" class="img-fluid mb-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-5 bg-image overlay-primary fixed overlay" style="background-image: url('/assets/images/hero_1.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 align-self-center text-center text-md-left mb-5 mb-md-0">
+            <h2 class="text-white">Get The Mobile Apps</h2>
+            <p class="mb-5 lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
+            <p class="mb-0">
+              <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-apple mr-3"></span>App Store</a>
+              <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-android mr-3"></span>Play Store</a>
+            </p>
+          </div>
+          <div class="col-md-6 ml-auto align-self-end">
+            <img src="/assets/images/mobiles.png" alt="Free Website Template by Free-Template.co" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="site-footer">
       <a href="#top" class="smoothscroll scroll-top">
         <span class="icon-keyboard_arrow_up"></span>
@@ -336,16 +431,16 @@
           <div class="col-6 col-md-3 mb-4 mb-md-0">
             <h3>Company</h3>
             <ul class="list-unstyled">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/testimonials">Testimonials</a></li>
+              <li><a href="/gallery">Gallery</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-3 mb-4 mb-md-0">
             <h3>Support</h3>
             <ul class="list-unstyled">
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/faqs">FAQs</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-3 mb-4 mb-md-0">
@@ -380,7 +475,6 @@
   <script src="/assets/js/jquery.waypoints.min.js"></script>
   <script src="/assets/js/jquery.animateNumber.min.js"></script>
   <script src="/assets/js/owl.carousel.min.js"></script>
-  <script src="/assets/js/quill.min.js"></script>
   <script src="/assets/js/bootstrap-select.min.js"></script>
   <script src="/assets/js/script.js"></script>
 </body>

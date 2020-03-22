@@ -16,29 +16,36 @@ A modern job board platform built with HTML, CSS, Bootstrap and jQuery that allo
 
 ```
 jobboard/
-├── css/
-│   ├── animate.min.css
-│   ├── bootstrap.min.css
+├── assets/
+│   ├── css/
+│   │   ├── animate.min.css
+│   │   ├── bootstrap.min.css
+│   │   ├── ...
+│   │   └── style.css
+│   ├── fonts/
+│   │   └── icomoon/
+│   │       ├── icomoon.eot
+│   │       ├── icomoon.svg
+│   │       ├── icomoon.ttf
+│   │       └── icomoon.woff
+│   ├── images/
+│   │   ├── hero_1.jpg
+│   │   ├── job_logo_*.jpg
+│   │   └── person_*.jpg
+│   │   └── ...
+│   └── js/
+│       ├── bootstrap.min.js
+│       ├── jquery.min.js
+│       ├── ...
+│       └── custom.js
+├── pages/
+│   ├── about.php
+│   ├── contact.php
+│   ├── jobs.php
 │   ├── ...
-│   ├── style.css
-├── fonts/
-│   └── icomoon.{css, ttf, woff, ...}
-├── images/
-│   ├── hero_1.jpg
-│   ├── job_logo_1.jpg
-│   ├── job_logo_2.jpg
-│   └── ...
-├── js/
-│   ├── jquery.min.js
-│   ├── bootstrap.min.js
-│   ├── ...
-│   └── script.js
-├── about.html
-├── contact.html
-├── index.html
-├── jobs.html
-├── post-job.html
-├── ...
+│   └── services.php
+├── .editorconfig
+├── index.php
 └── README.md
 ```
 
