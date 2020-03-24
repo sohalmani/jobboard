@@ -7,6 +7,7 @@
  */
 function app_run($routes) {
   // Include necessary files
+  require_once 'utils/conn.php';
   require_once 'utils/helpers.php';
   require_once 'utils/loaders.php';
   require_once 'utils/url.php';

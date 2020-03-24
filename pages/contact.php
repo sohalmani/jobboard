@@ -1,11 +1,10 @@
-    <!-- HOME -->
     <section class="section-hero overlay inner-page bg-image" style="background-image: url('/assets/images/hero_1.jpg');" id="home-section">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
             <h1 class="text-white font-weight-bold">Contact Us</h1>
             <div class="custom-breadcrumbs">
-              <a href="#">Home</a> <span class="mx-2 slash">/</span>
+              <a href="/">Home</a> <span class="mx-2 slash">/</span>
               <span class="text-white"><strong>Contact Us</strong></span>
             </div>
           </div>
@@ -16,27 +15,27 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 mb-5 mb-lg-0">
-            <form action="#" class="">
+            <form action="" method="post">
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">First Name</label>
-                  <input type="text" id="fname" class="form-control">
+                  <label class="text-black" for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first_name" class="form-control">
                 </div>
                 <div class="col-md-6">
-                  <label class="text-black" for="lname">Last Name</label>
-                  <input type="text" id="lname" class="form-control">
+                  <label class="text-black" for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last_name" class="form-control">
                 </div>
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="text-black" for="email">Email</label>
-                  <input type="email" id="email" class="form-control">
+                  <input type="email" id="email" name="email" class="form-control">
                 </div>
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
                   <label class="text-black" for="subject">Subject</label>
-                  <input type="subject" id="subject" class="form-control">
+                  <input type="text" id="subject" name="subject" class="form-control">
                 </div>
               </div>
               <div class="row form-group">
@@ -47,7 +46,7 @@
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                  <input type="submit" name="submit" value="Send Message" class="btn btn-primary btn-md text-white">
                 </div>
               </div>
             </form>
