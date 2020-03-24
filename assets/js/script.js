@@ -284,88 +284,89 @@ jQuery(function ($) {
 
   var paginationInit = function () {
     $(document).ready(function () {
-      const itemsPerPage = 5; // Number of jobs to display per page
-      const jobItems = $('.job-listings .job-listing'); // Select all job items
-      const totalJobs = jobItems.length; // Total number of jobs
+      // Configuration
+      const itemsPerPage = 5;
+      const $jobItems = $('.job-listing');
+      const totalJobs = $jobItems.length;
+      const totalPages = Math.ceil(totalJobs / itemsPerPage);
 
-      // Function to render the correct jobs for the selected page
-      function renderPage(pageNumber) {
-        const startIndex = (pageNumber - 1) * itemsPerPage;
+      // Initially hide all jobs using Bootstrap classes
+      $jobItems.addClass('d-none');
+
+      function showPage(page) {
+        const startIndex = (page - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
 
-        // Hide all jobs and then show the selected range using Bootstrap classes
-        jobItems.addClass('d-none').removeClass('d-block d-sm-flex');
-        jobItems.slice(startIndex, endIndex).addClass('d-block d-sm-flex').removeClass('d-none');
+        // Hide all jobs first using Bootstrap
+        $jobItems.addClass('d-none').removeClass('d-block d-sm-flex');
+        
+        // Show jobs for current page using Bootstrap classes
+        $jobItems.slice(startIndex, endIndex)
+          .removeClass('d-none')
+          .addClass('d-block d-sm-flex');
 
-        // Update the pagination text
-        const end = Math.min(endIndex, totalJobs);
+        // Update active state on pagination
+        $('.custom-pagination .d-inline-block a')
+          .removeClass('active')
+          .eq(page - 1)
+          .addClass('active');
+
+        // Update counter text
         $('.pagination-wrap .col-md-6 span').text(
-          `Showing ${startIndex + 1}-${end} of ${totalJobs} Jobs`
+          `Showing ${startIndex + 1}-${Math.min(endIndex, totalJobs)} of ${totalJobs} Jobs`
         );
 
-        // Update active class in pagination
-        $('.custom-pagination .d-inline-block a').removeClass('active');
-        $('.custom-pagination .d-inline-block a')
-          .eq(pageNumber - 1)
-          .addClass('active');
+        // Handle prev/next button states with Bootstrap disabled class
+        $('.custom-pagination .prev')
+          .toggleClass('disabled', page === 1)
+          .attr('aria-disabled', page === 1);
+        
+        $('.custom-pagination .next')
+          .toggleClass('disabled', page === totalPages)
+          .attr('aria-disabled', page === totalPages);
       }
 
-      // Function to initialize pagination buttons
-      function initializePagination() {
-        const totalPages = Math.ceil(totalJobs / itemsPerPage);
-        const paginationContainer = $('.custom-pagination .d-inline-block');
+      // Generate pagination buttons
+      const $paginationContainer = $('.custom-pagination .d-inline-block');
+      $paginationContainer.empty();
 
-        // Clear existing pagination
-        paginationContainer.empty();
-
-        // Generate pagination buttons
-        for (let i = 1; i <= totalPages; i++) {
-          const pageLink = $('<a></a>')
-            .attr('href', '#')
-            .text(i)
-            .addClass(i === 1 ? 'active' : '')
-            .click(function (e) {
-              e.preventDefault();
-              renderPage(i);
-            });
-
-          paginationContainer.append(pageLink);
-        }
+      for (let i = 1; i <= totalPages; i++) {
+        $('<a>', {
+          href: 'javascript:void(0)',
+          text: i,
+          class: 'px-2',
+          click: function(e) {
+            e.preventDefault();
+            showPage(i);
+          }
+        }).appendTo($paginationContainer);
       }
 
-      // Function to get the current page from the URL
-      function getPageFromURL() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const pageParam = parseInt(urlParams.get('page'), 10);
-        return !isNaN(pageParam) && pageParam > 0 ? pageParam : 1;
-      }
-
-      // Initialize everything
-      initializePagination();
-
-      // Render the correct page based on the URL or default to page 1
-      const currentPage = getPageFromURL();
-      renderPage(currentPage);
-
-      // Handle Prev/Next buttons
-      $('.custom-pagination .prev').click(function (e) {
+      // Handle prev/next clicks
+      $('.custom-pagination .prev').on('click', function(e) {
         e.preventDefault();
+        if ($(this).hasClass('disabled')) return;
+        
         const currentPage = $('.custom-pagination .d-inline-block a.active').index() + 1;
-        if (currentPage > 1) {
-          renderPage(currentPage - 1);
-        }
+        if (currentPage > 1) showPage(currentPage - 1);
       });
 
-      $('.custom-pagination .next').click(function (e) {
+      $('.custom-pagination .next').on('click', function(e) {
         e.preventDefault();
+        if ($(this).hasClass('disabled')) return;
+        
         const currentPage = $('.custom-pagination .d-inline-block a.active').index() + 1;
-        const totalPages = Math.ceil(totalJobs / itemsPerPage);
-        if (currentPage < totalPages) {
-          renderPage(currentPage + 1);
-        }
+        if (currentPage < totalPages) showPage(currentPage + 1);
       });
+
+      // Show first page initially or hide pagination if no jobs
+      if (totalJobs > 0) {
+        showPage(1);
+      } else {
+        $('.pagination-wrap').addClass('d-none');
+      }
     });
-  }
+  };
   paginationInit();
 
   var deleteJob = function () {

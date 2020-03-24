@@ -1073,7 +1073,7 @@ h4 {
   border-bottom: none;
 }
 
-.job-listings .job-listing a {
+.job-listings .job-listing>a {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1406,6 +1406,11 @@ h4 {
   background: #89ba16;
   color: #fff;
   border-color: #89ba16;
+}
+
+.custom-pagination .disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .border-width-2 {

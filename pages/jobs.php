@@ -1,4 +1,4 @@
-    <section class="section-hero home-section overlay inner-page bg-image" style="background-image: url('/assets/images/hero_1.jpg');" id="home-section">
+    <section class="section-hero home-section overlay inner-page bg-image" style="background-image: url('/assets/images/hero_1.jpg'); z-index: 3" id="home-section">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-12">
@@ -6,41 +6,44 @@
               <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, quas fugit ex!</p>
             </div>
-            <form method="get" class="search-jobs-form">
+            <form method="get" action="/jobs" class="search-jobs-form">
               <div class="row mb-5">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                  <input type="text" class="form-control form-control-lg" placeholder="Job title, Company...">
+                  <input type="text" class="form-control form-control-lg" name="keyword" placeholder="Job title, Company..." value="<?= isset($_GET['keyword']) ? htmlspecialchars($_GET['keyword']) : '' ?>">
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                  <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
-                    <option>Anywhere</option>
-                    <option>San Francisco</option>
-                    <option>Palo Alto</option>
-                    <option>New York</option>
-                    <option>Manhattan</option>
-                    <option>Ontario</option>
-                    <option>Toronto</option>
-                    <option>Kansas</option>
-                    <option>Mountain View</option>
+                  <select class="selectpicker" name="region" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
+                    <option value="">Anywhere</option>
+                    <option value="San Francisco" <?= (isset($_GET['region']) && $_GET['region'] == 'San Francisco') ? 'selected' : '' ?>>San Francisco</option>
+                    <option value="Palo Alto" <?= (isset($_GET['region']) && $_GET['region'] == 'Palo Alto') ? 'selected' : '' ?>>Palo Alto</option>
+                    <option value="New York" <?= (isset($_GET['region']) && $_GET['region'] == 'New York') ? 'selected' : '' ?>>New York</option>
+                    <option value="Manhattan" <?= (isset($_GET['region']) && $_GET['region'] == 'Manhattan') ? 'selected' : '' ?>>Manhattan</option>
+                    <option value="Ontario" <?= (isset($_GET['region']) && $_GET['region'] == 'Ontario') ? 'selected' : '' ?>>Ontario</option>
+                    <option value="Toronto" <?= (isset($_GET['region']) && $_GET['region'] == 'Toronto') ? 'selected' : '' ?>>Toronto</option>
+                    <option value="Kansas" <?= (isset($_GET['region']) && $_GET['region'] == 'Kansas') ? 'selected' : '' ?>>Kansas</option>
+                    <option value="Mountain View" <?= (isset($_GET['region']) && $_GET['region'] == 'Mountain View') ? 'selected' : '' ?>>Mountain View</option>
                   </select>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                  <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type">
-                    <option>Part Time</option>
-                    <option>Full Time</option>
+                  <select class="selectpicker" name="job_type" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type">
+                    <option value="">Any</option>
+                    <option value="Part Time" <?= (isset($_GET['job_type']) && $_GET['job_type'] == 'Part Time') ? 'selected' : '' ?>>Part Time</option>
+                    <option value="Full Time" <?= (isset($_GET['job_type']) && $_GET['job_type'] == 'Full Time') ? 'selected' : '' ?>>Full Time</option>
                   </select>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                  <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search"><span class="icon-search icon mr-2"></span>Search Job</button>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search">
+                    <span class="icon-search icon mr-2"></span>Search Job
+                  </button>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12 popular-keywords">
                   <h3>Trending Keywords:</h3>
                   <ul class="keywords list-unstyled m-0 p-0">
-                    <li><a href="#" class="">UI Designer</a></li>
-                    <li><a href="#" class="">Python</a></li>
-                    <li><a href="#" class="">Developer</a></li>
+                    <li><a href="/jobs?keyword=UI%20Designer" class="">UI Designer</a></li>
+                    <li><a href="/jobs?keyword=Python" class="">Python</a></li>
+                    <li><a href="/jobs?keyword=Developer" class="">Developer</a></li>
                   </ul>
                 </div>
               </div>
@@ -54,198 +57,83 @@
     </section>
     <section class="site-section" id="next">
       <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="section-title mb-2">43,167 Job Listed</h2>
-          </div>
-        </div>
-        <ul class="job-listings mb-5">
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_1.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Adidas</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> New York, New York
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-danger">Part Time</span>
-              </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_2.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Digital Marketing Director</h2>
-                <strong>Sprint</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_3.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Back-end Engineer (Python)</h2>
-                <strong>Amazon</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_4.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Senior Art Director</h2>
-                <strong>Microsoft</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Anywhere
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_5.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Puma</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> San Mateo, CA
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
-            </div>
-          </li>
-
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_1.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Adidas</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> New York, New York
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-danger">Part Time</span>
-              </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
-            </div>
-          </li>
-
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_2.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Digital Marketing Director</h2>
-                <strong>Sprint</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-              <div class="job-listing-actions d-none custom-width w-25 mt-3 mt-sm-0">
-                <button class="btn btn-outline-success">Edit</button>
-                <button class="btn btn-outline-danger">Delete</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="row pagination-wrap">
-          <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-            <span>Showing 1-7 Of 43,167 Jobs</span>
-          </div>
-          <div class="col-md-6 text-center text-md-right">
-            <div class="custom-pagination ml-auto">
-              <a href="#" class="prev">Prev</a>
-              <div class="d-inline-block">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-              </div>
-              <a href="#" class="next">Next</a>
+        <?php if (empty($jobs)): ?>
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-9 text-center">
+              <?php if (isset($_GET['keyword']) || isset($_GET['region']) || isset($_GET['job_type'])): ?>
+                <h2 class="section-title mb-4">No matching jobs found</h2>
+                <p>We couldn't find any jobs matching your search criteria. Try adjusting your search or browse all available jobs.</p>
+                <a href="/jobs" class="btn btn-primary btn-md mt-4">View All Jobs</a>
+              <?php else: ?>
+                <h2 class="section-title mb-4">No jobs available</h2>
+                <p>There are currently no job listings available. Please check back later.</p>
+              <?php endif; ?>
             </div>
           </div>
-        </div>
+        <?php else: ?>
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+              <h2 class="section-title mb-2"><?= $total_jobs ?> Job(s) Listed</h2>
+            </div>
+          </div>
+          <ul class="job-listings mb-5">
+            <?php foreach ($jobs as $job): ?>
+              <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                <a href="/job?id=<?= $job['id'] ?>"></a>
+                <div class="job-listing-logo">
+                  <img src="<?= $job['image'] ?>" alt="Image" class="img-fluid">
+                </div>
+                <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                  <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
+                    <h2><?= htmlspecialchars($job['title']) ?></h2>
+                    <strong><?= htmlspecialchars($job['company']) ?></strong>
+                  </div>
+                  <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
+                    <span class="icon-room"></span> <?= htmlspecialchars($job['location']) ?>, <?= htmlspecialchars($job['region']) ?>
+                  </div>
+                  <div class="job-listing-meta custom-width w-25">
+                    <span class="badge <?= (strtolower($job['type']) == 'full time') ? 'badge-success' : 'badge-danger' ?>"><?= htmlspecialchars($job['type']) ?></span>
+                  </div>
+                  <?php if (isset($_SESSION['user_id'])): ?>
+                    <div class="job-listing-actions custom-width w-25 mt-3 mt-sm-0">
+                      <a class="btn btn-primary btn-sm" href="/job/edit?id=<?= $job['id'] ?>"><span class="icon-pencil"></span> <span class="d-none d-lg-inline">Edit</span></a>
+                      <button class="btn btn-danger btn-sm delete-job-btn" data-job-id="<?= $job['id'] ?>"><span class="icon-delete"></span> <span class="d-none d-lg-inline">Delete</span></button>
+                    </div>
+                  <?php endif; ?>
+                </div>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+          <div class="row pagination-wrap">
+            <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+              <span>Loading...</span>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+              <div class="custom-pagination ml-auto">
+                <a href="javascript:void(0)" class="prev" aria-label="Previous page">Prev</a>
+                <div class="d-inline-block">
+                  <!-- Pagination numbers will be inserted here by JavaScript -->
+                </div>
+                <a href="javascript:void(0)" class="next" aria-label="Next page">Next</a>
+              </div>
+            </div>
+          </div>
+        <?php endif; ?>
       </div>
     </section>
-    <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url('/assets/images/hero_1.jpg');">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-8">
-            <h2 class="text-white">Looking For A Job?</h2>
-            <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
-          </div>
-          <div class="col-md-3 ml-auto">
-            <a href="#" class="btn btn-warning btn-block btn-lg">Sign Up</a>
+    <?php if (!isset($_SESSION['user_id'])): ?>
+      <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url('/assets/images/hero_1.jpg');">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h2 class="text-white">Post A Job?</h2>
+              <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci
+                impedit.</p>
+            </div>
+            <div class="col-md-3 ml-auto">
+              <a href="/login" class="btn btn-warning btn-block btn-lg">Log In</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    <?php endif; ?>
