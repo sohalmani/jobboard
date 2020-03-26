@@ -1,13 +1,12 @@
-    <!-- HOME -->
     <section class="section-hero overlay inner-page bg-image" style="background-image: url('/assets/images/hero_1.jpg');" id="home-section">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
-            <h1 class="text-white font-weight-bold">Product Designer</h1>
+            <h1 class="text-white font-weight-bold"><?= htmlspecialchars($job['title']) ?></h1>
             <div class="custom-breadcrumbs">
-              <a href="#">Home</a> <span class="mx-2 slash">/</span>
-              <a href="#">Job</a> <span class="mx-2 slash">/</span>
-              <span class="text-white"><strong>Product Designer</strong></span>
+              <a href="/">Home</a> <span class="mx-2 slash">/</span>
+              <a href="/jobs">Jobs</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong><?= htmlspecialchars($job['title']) ?></strong></span>
             </div>
           </div>
         </div>
@@ -19,14 +18,14 @@
           <div class="col-lg-12">
             <div class="d-flex align-items-center">
               <div class="border p-2 d-none d-sm-inline-block mr-3 rounded">
-                <img src="/assets/images/job_logo_5.jpg" alt="Image">
+                <img src="<?= htmlspecialchars($job['image']) ?>" alt="Image">
               </div>
               <div>
-                <h2>Product Designer</h2>
+                <h2><?= htmlspecialchars($job['title']) ?></h2>
                 <div>
-                  <span class="ml-0 mr-2 mb-2"><span class="icon-briefcase mr-2"></span>Puma</span>
-                  <span class="m-2"><span class="icon-room mr-2"></span>New York City</span>
-                  <span class="m-2"><span class="icon-clock-o mr-2"></span><span class="text-primary">Full Time</span></span>
+                  <span class="ml-0 mr-2 mb-2"><span class="icon-briefcase mr-2"></span><?= htmlspecialchars($job['company']) ?></span>
+                  <span class="m-2"><span class="icon-room mr-2"></span><?= htmlspecialchars($job['location']) ?></span>
+                  <span class="m-2"><span class="icon-clock-o mr-2"></span><span class="text-primary"><?= htmlspecialchars($job['type']) ?></span></span>
                 </div>
               </div>
             </div>
@@ -34,45 +33,58 @@
         </div>
         <div class="row">
           <div class="col-lg-8">
-            <div class="mb-5">
-              <figure class="mb-5"><img src="/assets/images/job_single_img_1.jpg" alt="Image" class="img-fluid rounded"></figure>
-              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-align-left mr-3"></span>Job Description</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis illum fuga eveniet. Deleniti asperiores, commodi quae ipsum quas est itaque, ipsa, dolore beatae voluptates nemo blanditiis iste eius officia minus.</p>
-              <p>Velit unde aliquam et voluptas reiciendis non sapiente labore, deleniti asperiores blanditiis nihil quia officiis dolor vero iste dolore vel molestiae saepe. Id nisi, consequuntur sunt impedit quidem, vitae mollitia!</p>
-            </div>
-            <div class="mb-5">
-              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-rocket mr-3"></span>Responsibilities</h3>
-              <ul class="list-unstyled m-0 p-0">
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Velit unde aliquam et voluptas reiciendis n Velit unde aliquam et voluptas reiciendis non sapiente labore</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia officiis dolor</span></li>
-              </ul>
-            </div>
-            <div class="mb-5">
-              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-book mr-3"></span>Education + Experience</h3>
-              <ul class="list-unstyled m-0 p-0">
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Velit unde aliquam et voluptas reiciendis non sapiente labore</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia officiis dolor</span></li>
-              </ul>
-            </div>
-            <div class="mb-5">
-              <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-turned_in mr-3"></span>Other Benifits</h3>
-              <ul class="list-unstyled m-0 p-0">
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Necessitatibus quibusdam facilis</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Velit unde aliquam et voluptas reiciendis non sapiente labore</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Commodi quae ipsum quas est itaque</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span></li>
-                <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span>Deleniti asperiores blanditiis nihil quia officiis dolor</span></li>
-              </ul>
-            </div>
+            <figure class="mb-5"><img src="/assets/images/job_single_img_1.jpg" alt="Image" class="img-fluid rounded"></figure>
+            <?php if (!empty($job['description'])): ?>
+              <div class="mb-5">
+                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-align-left mr-3"></span>Job Description</h3>
+                <?= $job['description'] ?>
+              </div>
+            <?php endif; ?>
+            <?php if (!empty($job['responsibilities'])): ?>
+              <div class="mb-5">
+                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-rocket mr-3"></span>Responsibilities</h3>
+                <ul class="list-unstyled mb-0 p-0">
+                  <?php
+                  $cleanContent = strip_tags($job['responsibilities']);
+                  $lines = explode("\n", $cleanContent);
+                  foreach ($lines as $line):
+                    if (trim($line)): ?>
+                      <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span><?= htmlspecialchars($line) ?></span></li>
+                  <?php endif; endforeach; ?>
+                </ul>
+              </div>
+            <?php endif; ?>
+            <?php if (!empty($job['requirements'])): ?>
+              <div class="mb-5">
+                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-book mr-3"></span>Education + Experience</h3>
+                <ul class="list-unstyled mb-0 p-0">
+                  <?php
+                  $cleanContent = strip_tags($job['requirements']);
+                  $lines = explode("\n", $cleanContent);
+                  foreach ($lines as $line):
+                    if (trim($line)): ?>
+                      <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span><?= htmlspecialchars($line) ?></span></li>
+                  <?php endif; endforeach; ?>
+                </ul>
+              </div>
+            <?php endif; ?>
+            <?php if (!empty($job['benefits'])): ?>
+              <div class="mb-5">
+                <h3 class="h5 d-flex align-items-center mb-4 text-primary"><span class="icon-turned_in mr-3"></span>Other Benifits</h3>
+                <ul class="list-unstyled mb-0 p-0">
+                  <?php
+                  $cleanContent = strip_tags($job['benefits']);
+                  $lines = explode("\n", $cleanContent);
+                  foreach ($lines as $line):
+                    if (trim($line)): ?>
+                      <li class="d-flex align-items-start mb-2"><span class="icon-check_circle mr-2 mt-1 text-muted"></span><span><?= htmlspecialchars($line) ?></span></li>
+                  <?php endif; endforeach; ?>
+                </ul>
+              </div>
+            <?php endif; ?>
             <div class="row mb-5">
               <div class="col-12">
-                <a href="#" class="btn btn-block btn-primary btn-md">Apply Now</a>
+                <a href="mailto:<?= htmlspecialchars($job['email']) ?>?subject=Application for <?= urlencode($job['title']) ?> position" class="btn btn-block btn-primary btn-md">Apply Now</a>
               </div>
             </div>
           </div>
@@ -80,182 +92,60 @@
             <div class="bg-light p-3 border rounded mb-4">
               <h3 class="text-primary  mt-3 h5 pl-3 mb-3 ">Job Summary</h3>
               <ul class="list-unstyled pl-3 mb-0">
-                <li class="mb-2"><strong class="text-black">Published on:</strong> April 14, 2019</li>
-                <li class="mb-2"><strong class="text-black">Vacancy:</strong> 20</li>
-                <li class="mb-2"><strong class="text-black">Employment Status:</strong> Full-time</li>
-                <li class="mb-2"><strong class="text-black">Experience:</strong> 2 to 3 year(s)</li>
-                <li class="mb-2"><strong class="text-black">Job Location:</strong> New ork City</li>
-                <li class="mb-2"><strong class="text-black">Salary:</strong> $60k - $100k</li>
-                <li class="mb-2"><strong class="text-black">Gender:</strong> Any</li>
-                <li class="mb-2"><strong class="text-black">Application Deadline:</strong> April 28, 2019</li>
+                <li class="mb-2"><strong class="text-black">Published on:</strong> <?= $job['formatted_date'] ?></li>
+                <li class="mb-2"><strong class="text-black">Vacancy:</strong> <?= htmlspecialchars($job['vacancies']) ?></li>
+                <li class="mb-2"><strong class="text-black">Employment Status:</strong> <?= htmlspecialchars($job['type']) ?></li>
+                <li class="mb-2"><strong class="text-black">Experience:</strong> <?= htmlspecialchars($job['experience']) ?></li>
+                <li class="mb-2"><strong class="text-black">Job Location:</strong> <?= htmlspecialchars($job['location']) ?></li>
+                <li class="mb-2"><strong class="text-black">Salary:</strong> <?= htmlspecialchars($job['salary']) ?></li>
+                <li class="mb-2"><strong class="text-black">Application Deadline:</strong> <?= $job['formatted_deadline'] ?></li>
               </ul>
             </div>
             <div class="bg-light p-3 border rounded">
               <h3 class="text-primary mt-3 h5 pl-3 mb-3 ">Follow Us</h3>
               <div class="px-3">
-                <a href="#" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
-                <a href="#" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
-                <a href="#" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
+                <a href="javascript:void(0)" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-facebook"></span></a>
+                <a href="javascript:void(0)" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
+                <a href="javascript:void(0)" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="site-section" id="next">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="section-title mb-2">22,392 Related Jobs</h2>
+    <?php if (!empty($relatedJobs)): ?>
+      <section class="site-section" id="next">
+        <div class="container">
+          <div class="row mb-5 justify-content-center">
+            <div class="col-md-7 text-center">
+              <h2 class="section-title mb-2">Related Jobs</h2>
+            </div>
           </div>
+          <ul class="job-listings mb-5">
+            <?php foreach ($relatedJobs as $relatedJob): ?>
+              <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                <a href="/job?id=<?= $relatedJob['id'] ?>"></a>
+                <div class="job-listing-logo">
+                  <img src="<?= htmlspecialchars($relatedJob['image']) ?>" alt="Image" class="img-fluid">
+                </div>
+                <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                  <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
+                    <h2><?= htmlspecialchars($relatedJob['title']) ?></h2>
+                    <strong><?= htmlspecialchars($relatedJob['company']) ?></strong>
+                  </div>
+                  <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
+                    <span class="icon-room"></span> <?= htmlspecialchars($relatedJob['location']) ?>
+                  </div>
+                  <div class="job-listing-meta custom-width w-25">
+                    <span class="badge badge-<?= strtolower($relatedJob['type']) === 'full time' ? 'success' : 'danger' ?>"><?= htmlspecialchars($relatedJob['type']) ?></span>
+                  </div>
+                </div>
+              </li>
+            <?php endforeach; ?>
+          </ul>
         </div>
-        <ul class="job-listings mb-5">
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_1.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Adidas</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> New York, New York
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-danger">Part Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_2.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Digital Marketing Director</h2>
-                <strong>Sprint</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_3.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Back-end Engineer (Python)</h2>
-                <strong>Amazon</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_4.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Senior Art Director</h2>
-                <strong>Microsoft</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Anywhere
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_5.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Puma</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> San Mateo, CA
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_1.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Adidas</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> New York, New York
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-danger">Part Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_2.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Digital Marketing Director</h2>
-                <strong>Sprint</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="row pagination-wrap">
-          <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-            <span>Showing 1-7 Of 22,392 Jobs</span>
-          </div>
-          <div class="col-md-6 text-center text-md-right">
-            <div class="custom-pagination ml-auto">
-              <a href="#" class="prev">Prev</a>
-              <div class="d-inline-block">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-              </div>
-              <a href="#" class="next">Next</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    <?php endif; ?>
     <section class="bg-light pt-5 testimony-full">
       <div class="owl-carousel single-carousel">
         <div class="container">
@@ -293,8 +183,8 @@
             <h2 class="text-white">Get The Mobile Apps</h2>
             <p class="mb-5 lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
             <p class="mb-0">
-              <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-apple mr-3"></span>App Store</a>
-              <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-android mr-3"></span>Play Store</a>
+              <a href="javascript:void(0)" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-apple mr-3"></span>App Store</a>
+              <a href="javascript:void(0)" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-android mr-3"></span>Play Store</a>
             </p>
           </div>
           <div class="col-md-6 ml-auto align-self-end">
