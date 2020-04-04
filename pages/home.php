@@ -7,28 +7,28 @@
               <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
             </div>
-            <form method="get" class="search-jobs-form">
+            <form method="get" action="/jobs" class="search-jobs-form">
               <div class="row mb-5">
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                  <input type="text" class="form-control form-control-lg" placeholder="Job title, Company...">
+                  <input type="text" class="form-control form-control-lg" name="keyword" placeholder="Job title, Company...">
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                  <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
-                    <option>Anywhere</option>
-                    <option>San Francisco</option>
-                    <option>Palo Alto</option>
-                    <option>New York</option>
-                    <option>Manhattan</option>
-                    <option>Ontario</option>
-                    <option>Toronto</option>
-                    <option>Kansas</option>
-                    <option>Mountain View</option>
+                  <select class="selectpicker" name="region" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
+                    <option value="">Anywhere</option>
+                    <option value="San Francisco">San Francisco</option>
+                    <option value="Palo Alto">Palo Alto</option>
+                    <option value="New York">New York</option>
+                    <option value="Manhattan">Manhattan</option>
+                    <option value="Ontario">Ontario</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Mountain View">Mountain View</option>
                   </select>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-                  <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type">
-                    <option>Part Time</option>
-                    <option>Full Time</option>
+                  <select class="selectpicker" name="job_type" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Job Type">
+                    <option value="Part Time">Part Time</option>
+                    <option value="Full Time">Full Time</option>
                   </select>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -39,9 +39,9 @@
                 <div class="col-md-12 popular-keywords">
                   <h3>Trending Keywords:</h3>
                   <ul class="keywords list-unstyled m-0 p-0">
-                    <li><a href="#" class="">UI Designer</a></li>
-                    <li><a href="#" class="">Python</a></li>
-                    <li><a href="#" class="">Developer</a></li>
+                    <li><a href="/jobs?keyword=UI%20Designer" class="">UI Designer</a></li>
+                    <li><a href="/jobs?keyword=Python" class="">Python</a></li>
+                    <li><a href="/jobs?keyword=Developer" class="">Developer</a></li>
                   </ul>
                 </div>
               </div>
@@ -70,9 +70,9 @@
           </div>
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
-              <strong class="number" data-number="54">0</strong>
+              <strong class="number" data-number="186">0</strong>
             </div>
-            <span class="caption">Jobs Posted</span>
+            <span class="caption">Industry Partners</span>
           </div>
           <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
             <div class="d-flex align-items-center justify-content-center mb-2">
@@ -89,156 +89,36 @@
         </div>
       </div>
     </section>
-    <section class="site-section">
+    <section class="site-section pb-0">
       <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-7 text-center">
-            <h2 class="section-title mb-2">43,167 Job Listed</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a data-fancybox data-ratio="2" href="https://vimeo.com/317571768" class="block__96788">
+              <span class="play-icon"><span class="icon-play"></span></span>
+              <img src="/assets/images/sq_img_6.jpg" alt="Image" class="img-fluid img-shadow">
+            </a>
+          </div>
+          <div class="col-lg-5 ml-auto">
+            <h2 class="section-title mb-3">JobBoard For Freelancers, Web Developers</h2>
+            <p class="lead">Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem.</p>
+            <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p>
           </div>
         </div>
-        <ul class="job-listings mb-5">
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_1.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Adidas</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> New York, New York
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-danger">Part Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_2.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Digital Marketing Director</h2>
-                <strong>Sprint</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_3.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Back-end Engineer (Python)</h2>
-                <strong>Amazon</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_4.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Senior Art Director</h2>
-                <strong>Microsoft</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Anywhere
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_5.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Puma</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> San Mateo, CA
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_1.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Product Designer</h2>
-                <strong>Adidas</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> New York, New York
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-danger">Part Time</span>
-              </div>
-            </div>
-          </li>
-          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-            <a href="/job"></a>
-            <div class="job-listing-logo">
-              <img src="/assets/images/job_logo_2.jpg" alt="Image" class="img-fluid">
-            </div>
-            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-              <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
-                <h2>Digital Marketing Director</h2>
-                <strong>Sprint</strong>
-              </div>
-              <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
-                <span class="icon-room"></span> Overland Park, Kansas
-              </div>
-              <div class="job-listing-meta custom-width w-25">
-                <span class="badge badge-success">Full Time</span>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="row pagination-wrap">
-          <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-            <span>Showing 1-7 Of 43,167 Jobs</span>
+      </div>
+    </section>
+    <section class="site-section pt-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0 order-md-2">
+            <a data-fancybox data-ratio="2" href="https://vimeo.com/317571768" class="block__96788">
+              <span class="play-icon"><span class="icon-play"></span></span>
+              <img src="/assets/images/sq_img_8.jpg" alt="Image" class="img-fluid img-shadow">
+            </a>
           </div>
-          <div class="col-md-6 text-center text-md-right">
-            <div class="custom-pagination ml-auto">
-              <a href="#" class="prev">Prev</a>
-              <div class="d-inline-block">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-              </div>
-              <a href="#" class="next">Next</a>
-            </div>
+          <div class="col-lg-5 mr-auto order-md-1  mb-5 mb-lg-0">
+            <h2 class="section-title mb-3">JobBoard For Workers</h2>
+            <p class="lead">Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem.</p>
+            <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p>
           </div>
         </div>
       </div>
@@ -247,11 +127,11 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-8">
-            <h2 class="text-white">Looking For A Job?</h2>
+            <h2 class="text-white">Post A Job?</h2>
             <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
           </div>
           <div class="col-md-3 ml-auto">
-            <a href="#" class="btn btn-warning btn-block btn-lg">Sign Up</a>
+            <a href="/login" class="btn btn-warning btn-block btn-lg">Login</a>
           </div>
         </div>
       </div>
@@ -331,8 +211,8 @@
             <h2 class="text-white">Get The Mobile Apps</h2>
             <p class="mb-5 lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
             <p class="mb-0">
-              <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-apple mr-3"></span>App Store</a>
-              <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-android mr-3"></span>Play Store</a>
+              <a href="javascript:void(0)" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-apple mr-3"></span>App Store</a>
+              <a href="javascript:void(0)" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-android mr-3"></span>Play Store</a>
             </p>
           </div>
           <div class="col-md-6 ml-auto align-self-end">
