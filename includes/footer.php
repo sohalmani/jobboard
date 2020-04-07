@@ -61,6 +61,7 @@
   <script src="/assets/js/jquery.waypoints.min.js"></script>
   <script src="/assets/js/jquery.animateNumber.min.js"></script>
   <script src="/assets/js/owl.carousel.min.js"></script>
+  <script src="/assets/js/quill.min.js"></script>
   <script src="/assets/js/bootstrap-select.min.js"></script>
   <script src="/assets/js/script.js"></script>
 </body>

@@ -270,12 +270,17 @@ jQuery(function ($) {
 
     if ($('.editor').length > 0) {
       $('.editor').each(function() {
-        var quill = new Quill(this, {
+        var editor = new Quill(this, {
           modules: {
             toolbar: toolbarOptions,
           },
           placeholder: $(this).data('placeholder') || 'Compose an epic...',
           theme: 'snow' // or 'bubble'
+        });
+
+        // Handle text changes
+        editor.on('text-change', function() {
+          $(editor.container).siblings('input[type="hidden"]').val(editor.root.innerHTML);
         });
       });
     }

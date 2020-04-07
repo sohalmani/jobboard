@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/assets/fonts/icomoon.css">
   <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/assets/css/animate.min.css">
+  <link rel="stylesheet" href="/assets/css/quill.snow.min.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body id="top">
