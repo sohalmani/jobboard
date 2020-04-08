@@ -19,7 +19,7 @@ function fetchJobs($conn, $searchCriteria = []) {
   $types = '';
 
   if (!empty($searchCriteria['keyword'])) {
-    $conditions[] = "(title LIKE ? OR company LIKE ?)";
+    $conditions[] = "(title LIKE ? OR company_name LIKE ?)";
     $params[] = '%' . $searchCriteria['keyword'] . '%';
     $params[] = '%' . $searchCriteria['keyword'] . '%';
     $types .= 'ss';

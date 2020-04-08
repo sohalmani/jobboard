@@ -18,12 +18,12 @@
           <div class="col-lg-12">
             <div class="d-flex align-items-center">
               <div class="border p-2 d-none d-sm-inline-block mr-3 rounded">
-                <img src="<?= htmlspecialchars($job['image']) ?>" alt="Image">
+                <img src="/assets/images/<?= htmlspecialchars($job['company_logo']) ?>" alt="Image">
               </div>
               <div>
                 <h2><?= htmlspecialchars($job['title']) ?></h2>
                 <div>
-                  <span class="ml-0 mr-2 mb-2"><span class="icon-briefcase mr-2"></span><?= htmlspecialchars($job['company']) ?></span>
+                  <span class="ml-0 mr-2 mb-2"><span class="icon-briefcase mr-2"></span><?= htmlspecialchars($job['company_name']) ?></span>
                   <span class="m-2"><span class="icon-room mr-2"></span><?= htmlspecialchars($job['location']) ?></span>
                   <span class="m-2"><span class="icon-clock-o mr-2"></span><span class="text-primary"><?= htmlspecialchars($job['type']) ?></span></span>
                 </div>
@@ -84,7 +84,7 @@
             <?php endif; ?>
             <div class="row mb-5">
               <div class="col-12">
-                <a href="mailto:<?= htmlspecialchars($job['email']) ?>?subject=Application for <?= urlencode($job['title']) ?> position" class="btn btn-block btn-primary btn-md">Apply Now</a>
+                <a href="mailto:<?= htmlspecialchars($job['user_email']) ?>?subject=Application for <?= urlencode($job['title']) ?> position" class="btn btn-block btn-primary btn-md">Apply Now</a>
               </div>
             </div>
           </div>
@@ -126,12 +126,12 @@
               <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
                 <a href="/job?id=<?= $relatedJob['id'] ?>"></a>
                 <div class="job-listing-logo">
-                  <img src="<?= htmlspecialchars($relatedJob['image']) ?>" alt="Image" class="img-fluid">
+                  <img src="/assets/images/<?= htmlspecialchars($relatedJob['company_logo']) ?>" alt="Image" class="img-fluid">
                 </div>
                 <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                   <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
                     <h2><?= htmlspecialchars($relatedJob['title']) ?></h2>
-                    <strong><?= htmlspecialchars($relatedJob['company']) ?></strong>
+                    <strong><?= htmlspecialchars($relatedJob['company_name']) ?></strong>
                   </div>
                   <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
                     <span class="icon-room"></span> <?= htmlspecialchars($relatedJob['location']) ?>

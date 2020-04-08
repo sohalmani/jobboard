@@ -13,10 +13,13 @@ $conn = getDatabaseConnection();
 function fetchJobById($conn, $jobId) {
   if (!$jobId) return null;
 
-  $sql = "SELECT *, 
+  $sql = "SELECT jobs.*, 
+          users.email as user_email,
           DATE_FORMAT(published_on, '%M %d, %Y') as formatted_date,
           DATE_FORMAT(application_deadline, '%M %d, %Y') as formatted_deadline 
-          FROM jobs WHERE id = ?";
+          FROM jobs
+          LEFT JOIN users ON jobs.user_id = users.id 
+          WHERE jobs.id = ?";
 
   $stmt = mysqli_prepare($conn, $sql);
 
@@ -44,7 +47,7 @@ function getLastWord($title) {
 }
 
 /**
- * Fetches related jobs based on a similar job title, company, or type.
+ * Fetches related jobs based on a similar job title, company name, or type.
  *
  * @param mysqli $conn The database connection object.
  * @param array $job The job data to find similar jobs for.
@@ -54,7 +57,7 @@ function getLastWord($title) {
 function fetchRelatedJobs($conn, $job) {
   $sql = "SELECT *, DATE_FORMAT(published_on, '%M %d, %Y') as formatted_date 
           FROM jobs 
-          WHERE (company = ? OR type = ? OR title LIKE ?) 
+          WHERE (company_name = ? OR type = ? OR title LIKE ?) 
           AND id != ? 
           ORDER BY published_on DESC 
           LIMIT 5";
@@ -64,7 +67,7 @@ function fetchRelatedJobs($conn, $job) {
   if ($stmt) {
     $searchTerm = "%" . getLastWord($job['title']) . "%";
     mysqli_stmt_bind_param($stmt, "sssi", 
-      $job['company'], 
+      $job['company_name'], 
       $job['type'], 
       $searchTerm,
       $job['id']

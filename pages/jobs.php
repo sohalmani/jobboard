@@ -81,12 +81,12 @@
               <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
                 <a href="/job?id=<?= $job['id'] ?>"></a>
                 <div class="job-listing-logo">
-                  <img src="<?= $job['image'] ?>" alt="Image" class="img-fluid">
+                  <img src="/assets/images/<?= $job['company_logo'] ?>" alt="Image" class="img-fluid">
                 </div>
                 <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
                   <div class="job-listing-position custom-width w-25 mb-3 mb-sm-0">
                     <h2><?= htmlspecialchars($job['title']) ?></h2>
-                    <strong><?= htmlspecialchars($job['company']) ?></strong>
+                    <strong><?= htmlspecialchars($job['company_name']) ?></strong>
                   </div>
                   <div class="job-listing-location custom-width w-25 mb-3 mb-sm-0">
                     <span class="icon-room"></span> <?= htmlspecialchars($job['location']) ?>, <?= htmlspecialchars($job['region']) ?>
