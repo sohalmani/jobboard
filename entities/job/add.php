@@ -3,7 +3,7 @@
 if (!isset($_SESSION['user_id'])) {
   redirect('/login');
 }
-echo basePath('assets/images/hero_1.jpg');
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $conn = getDatabaseConnection();
   
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Check file size
     if ($file["size"] > 500000) {
-      return [false, "File is too large."];
+      return [false, "File is too large (max 500KB)."];
     }
     
     // Allow jpg file format only
@@ -56,18 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   try {
-    // Handle file upload first
-    $companyLogo = '';
-    
-    if (isset($_FILES['company_logo'])) {
-      [$success, $result] = handleFileUpload($_FILES['company_logo'], basePath('assets/images/'));
-      if ($success) {
-        $companyLogo = $result;
-      } else {
-        throw new Exception($result);
-      }
-    }
-
     // Get and sanitize form data
     $title = sanitizeInput($_POST['job_title']);
     $type = sanitizeInput($_POST['job_type']);
@@ -88,10 +76,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $companyLinkedin = sanitizeInput($_POST['company_linkedin'] ?? '');
 
     // Validate required fields
-    if (empty($title) || empty($type) || empty($location) || empty($region) || 
-        empty($experience) || empty($salary) || empty($vacancies) || empty($applicationDeadline) || 
-        empty($description) || empty($companyName)) {
-      throw new Exception("Please fill in all required fields.");
+    $errors = [];
+    $requiredFields = [
+      'job_title' => $title,
+      'job_type' => $type,
+      'job_location' => $location,
+      'job_region' => $region,
+      'experience' => $experience,
+      'salary' => $salary,
+      'vacancies' => $vacancies,
+      'application_deadline' => $applicationDeadline,
+      'job_description' => $description,
+      'company_name' => $companyName
+    ];
+
+    foreach ($requiredFields as $fieldName => $value) {
+      if (empty($value)) {
+        $errors[] = ucwords(str_replace('_', ' ', $fieldName));
+      }
+    }
+
+    if (!empty($errors)) {
+      throw new Exception("Please fill in " . implode(", ", $errors) . " & Company Logo.");
+    }
+
+    // Handle file upload
+    $companyLogo = '';
+    
+    // Check if file was actually uploaded
+    if (isset($_FILES['company_logo'])) {
+      [$success, $result] = handleFileUpload($_FILES['company_logo'], basePath('assets/images/'));
+      if ($success) {
+        $companyLogo = $result;
+      } else {
+        throw new Exception($result);
+      }
     }
 
     // Insert into database
@@ -126,7 +145,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       throw new Exception($stmt->error);
     }
   } catch (Exception $e) {
-    echo "Error: " . $e->getMessage();
+    $_SESSION['form_error'] = $e->getMessage();
+    $_SESSION['form_data'] = $_POST;
+    redirect('/job/add');
   } finally {
     if (isset($stmt)) {
       $stmt->close();
