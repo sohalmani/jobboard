@@ -15,9 +15,16 @@ function app_run($routes) {
 
   // Get the current URI
   $uri = getUri();
-
-  // Load the header and footer partials
-  loadPartial('header');
-  loadPage($uri, $routes);
-  loadPartial('footer');
+  
+  // Check if this is an AJAX request
+  if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && 
+      strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') {
+    // For AJAX requests, just load the page without header/footer
+    loadPage($uri, $routes);
+  } else {
+    // For regular requests, load with header and footer
+    loadPartial('header');
+    loadPage($uri, $routes);
+    loadPartial('footer');
+  }
 }

@@ -1082,7 +1082,7 @@ h4 {
   transition: .3s all ease;
 }
 
-.job-listings .job-listing a:hover {
+.job-listings .job-listing>a:hover {
   border-left: 7px solid #89ba16;
 }
 
@@ -1115,6 +1115,11 @@ h4 {
   .job-listings .job-listing-meta {
     text-align: center;
   }
+}
+
+.job-listings .job-listing-actions {
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 575.98px) {

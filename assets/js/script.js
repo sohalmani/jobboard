@@ -198,6 +198,49 @@ jQuery(function ($) {
   }
   counterInit();
 
+  var deleteJobInit = function() {
+    $(document).on('click', '.delete-job-btn', function(e) {
+      e.preventDefault();
+      var jobId = $(this).data('job-id');
+      var $btn = $(this);
+      
+      if (!confirm('Are you sure you want to delete this job posting? This action cannot be undone.')) {
+        return;
+      }
+      
+      $btn.prop('disabled', true);
+      
+      $.ajax({
+        url: '/job/delete',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({
+          action: 'delete',
+          jobId: jobId
+        })
+      })
+      .done(function(response) {
+        if (response.success) {
+          window.location.href = '/jobs';
+        } else {
+          alert(response.message || 'Failed to delete the job.');
+        }
+      })
+      .fail(function(xhr) {
+        var message = 'Failed to delete the job.';
+        try {
+          var response = JSON.parse(xhr.responseText);
+          message = response.message || message;
+        } catch (e) {}
+        alert(message);
+      })
+      .always(function() {
+        $btn.prop('disabled', false);
+      });
+    });
+  };
+  deleteJobInit();
+
   var selectPickerInit = function () {
     $('.selectpicker').selectpicker();
   }
@@ -373,62 +416,4 @@ jQuery(function ($) {
     });
   };
   paginationInit();
-
-  var deleteJob = function () {
-    document.querySelectorAll('.delete-job-btn').forEach((button) => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        const jobId = button.getAttribute('data-job-id');
-        if (!jobId) return;
-
-        fetch('/jobs', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            action: 'delete',
-            jobId: jobId,
-          }),
-        })
-          .then((response) => {
-            if (response.status === 401) {
-              // Handle unauthorized access
-              alert('You must be logged in to delete a job.');
-              return;
-            }
-
-            if (!response.ok) {
-              throw new Error('An error occurred while deleting the job.');
-            }
-
-            return response.json();
-          })
-          .then((data) => {
-            if (data && data.message) {
-              alert(data.message);
-              // Optionally reload the page or remove the job from the UI
-              location.reload();
-            }
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-            alert('Failed to delete the job. Please try again later.');
-          });
-      });
-    });
-  }
-  deleteJob();
-
-  $('#save-job').on('click', function() {
-    // Get the Quill content
-    var quillContent = new Quill('#editor-1').root.innerHTML;
-
-    // Set the value of the hidden input field
-    document.getElementById('job-description').value = quillContent;
-
-    // Submit the form
-    $('#insert-form')[0].submit();
-  });
 });
