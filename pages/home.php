@@ -131,7 +131,11 @@
             <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
           </div>
           <div class="col-md-3 ml-auto">
-            <a href="/login" class="btn btn-warning btn-block btn-lg">Login</a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+              <a href="/job/add" class="btn btn-warning btn-block btn-lg">Post Job</a>
+            <?php else: ?>
+              <a href="/login" class="btn btn-warning btn-block btn-lg">Login</a>
+            <?php endif; ?>
           </div>
         </div>
       </div>
