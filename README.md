@@ -1,14 +1,37 @@
 # Job Board Platform
 
-A modern job board platform built with HTML, CSS, Bootstrap and jQuery that allows employers to post jobs and job seekers to find opportunities.
+A modern and responsive job board platform built with PHP, MySQL, and Bootstrap. This platform allows employers to post jobs and job seekers to find and apply for positions.
 
 ## Features
 
-- Clean and responsive design
-- Job listing page with filtering options
+### For Job Seekers
+- Clean and responsive user interface
+- Advanced job search with multiple filters
+  - Search by keyword
+  - Filter by location
+  - Filter by job type (Full-time/Part-time)
 - Detailed job view pages
-- Job posting form for employers
-- Company profile sections
+- Easy application process
+- Mobile-friendly interface
+- User account management
+
+### For Employers
+- Intuitive job posting interface
+- Rich text editor for job descriptions
+- Company logo upload
+- Job management dashboard
+- Edit and delete job postings
+- Track job views and applications
+
+### System Features
+- Secure user authentication
+- CSRF protection
+- Input validation and sanitization
+- Responsive design
+- Clean URL structure
+- Error handling and user feedback
+- Session management
+- Database security
 - Social media integration
 - Mobile-friendly interface
 
@@ -49,25 +72,73 @@ jobboard/
 └── README.md
 ```
 
-## Setup
+## Technology Stack
 
-1. Clone the repository
+- **Backend**: PHP 8.0+
+- **Database**: MySQL 5.7+
+- **Frontend**: 
+  - HTML5
+  - CSS3
+  - Bootstrap 4
+  - jQuery
+- **Libraries**:
+  - Quill.js for rich text editing
+  - Bootstrap Select for enhanced dropdowns
+  - Owl Carousel for sliders
+  - Animate.css for animations
+  - IcoMoon for icons
+
+## Installation
+
+1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/jobboard.git
+git clone https://github.com/sohalmani/jobboard.git
+cd jobboard
 ```
 
-2. Open the project in your preferred web browser
+2. Set up your web server (Apache/Nginx) to point to the project directory
+
+3. Create a MySQL database and import the schema:
 ```bash
-open index.html
+mysql -u root -p
+CREATE DATABASE jobboard;
+USE jobboard;
+SOURCE schema.sql;
 ```
 
-## Technologies Used
+4. Configure your database connection in `config.php`
 
-- HTML5
-- CSS3
-- Bootstrap 4
-- jQuery
-- IcoMoon Fonts & Icons
+5. Ensure proper permissions:
+```bash
+chmod 755 assets/images
+```
+
+## Configuration
+
+The main configuration file `config.php` contains:
+- Database credentials
+- Site settings
+- Email configuration
+- Upload paths
+- Security settings
+
+## Security Features
+
+- Password hashing using PHP's password_hash()
+- CSRF protection on all forms
+- Input validation and sanitization
+- Prepared SQL statements
+- Session security
+- File upload validation
+- XSS protection
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Opera (latest)
 
 ## Contributing
 
